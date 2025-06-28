@@ -1,7 +1,7 @@
 /* CSS Variables and Theme Configuration */
 :root {
-    --primary-color: #A50F15;
-    --primary-hover: #800000;
+    --primary-color: #E53935;
+    --primary-hover: #D32F2F;
     --dark-bg: #262626;
     --light-bg: #f8f9fa;
     --text-color-dark: #111827;
@@ -175,7 +175,7 @@ h2 {
 }
 
 .section-intro {
-    text-align: center;
+    text-align: left;
     font-size: 1.125rem;
     margin-bottom: 3rem;
     max-width: 800px;
@@ -225,7 +225,7 @@ h2 {
 
 .feature-item h4 {
     color: var(--primary-color);
-    font-size: 1.125rem;
+    font-size: 1.375rem;
     margin-bottom: 0.5rem;
 }
 
