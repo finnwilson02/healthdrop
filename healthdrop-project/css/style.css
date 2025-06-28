@@ -1,0 +1,453 @@
+/* CSS Variables and Theme Configuration */
+:root {
+    --primary-color: #A50F15;
+    --primary-hover: #800000;
+    --dark-bg: #262626;
+    --light-bg: #f8f9fa;
+    --text-color-dark: #111827;
+    --text-color-light: #f8f9fa;
+    --card-bg: #ffffff;
+    --font-family: 'Inter', sans-serif;
+    --container-padding: 20px;
+    --section-padding: 5rem 0;
+}
+
+/* CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    background: var(--light-bg);
+    color: var(--text-color-dark);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+/* Header and Hero Section Styles */
+#hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(31, 41, 55, 0.8), rgba(31, 41, 55, 0.8)), url('../assets/hero-image.jpg') center/cover;
+    color: var(--text-color-light);
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color-light);
+    text-decoration: none;
+}
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: block; /* Show on mobile by default */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1000; /* Ensure it's on top of other content */
+}
+
+.hamburger-menu .line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color-light);
+    margin: 5px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hamburger animation when active */
+.hamburger-menu.is-active .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-menu.is-active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.is-active .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Navigation Menu */
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 6rem 2rem 2rem;
+    background: var(--dark-bg);
+    z-index: 999;
+    transform: translateY(-100%); /* Start hidden above the viewport */
+    transition: transform 0.4s ease-in-out;
+}
+
+/* The active state, to be toggled by JS */
+.nav-links.active {
+    transform: translateY(0);
+}
+
+.nav-links a {
+    color: var(--text-color-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+.hero-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: var(--primary-hover);
+}
+
+/* Common Content and Typography Styles */
+section {
+    padding: var(--section-padding);
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Grid Layout Classes */
+.grid-3-col,
+.grid-2-col {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+/* Card Component Styles */
+.card {
+    padding: 2rem;
+    background: var(--card-bg);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.highlight-card {
+    background: var(--primary-color);
+    color: var(--text-color-light);
+}
+
+/* Solution Section Specific Styles */
+#solution {
+    background: var(--dark-bg);
+    color: var(--text-color-light);
+}
+
+#solution h2 {
+    color: var(--text-color-light);
+}
+
+.feature-item {
+    text-align: left;
+}
+
+.feature-item h4 {
+    color: var(--primary-color);
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+    opacity: 0.9;
+}
+
+/* ======== RESPONSIVE TABLE SYSTEM STYLES ======== */
+
+/* --- Mobile View (Default) --- */
+.table-desktop {
+    display: none; /* Hide desktop table by default */
+}
+
+.mobile-table-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    overflow: hidden; /* Ensures border-radius clips the table */
+}
+
+.mobile-table-card h3 {
+    background: #f8f9fa;
+    padding: 12px 15px;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.mobile-table-card.highlight h3 {
+    background: var(--primary-color);
+    color: var(--text-color-light);
+}
+
+.mobile-table-card table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.mobile-table-card td {
+    padding: 12px 15px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.mobile-table-card td:first-child {
+    font-weight: 600;
+    width: 40%; /* Give labels a consistent width */
+}
+
+/* Footer Styles */
+footer {
+    background: var(--light-bg);
+    color: var(--text-color-dark);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+footer h2 {
+    color: var(--text-color-dark);
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+.contact-info {
+    margin: 2rem 0;
+}
+
+.contact-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    opacity: 0.7;
+    font-size: 0.875rem;
+}
+
+/* Roadmap Section Specific Styles */
+#roadmap {
+    background: var(--dark-bg);
+    color: var(--text-color-light);
+}
+
+#roadmap h2 {
+    color: var(--text-color-light);
+}
+
+/* ======== TIMELINE STYLES ======== */
+.timeline-list {
+    list-style: none;
+    position: relative;
+    padding-left: 30px; /* Space for the timeline line and dots */
+    max-width: 700px;
+    margin: 2rem auto 0;
+}
+
+/* The vertical line */
+.timeline-list::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.timeline-list li {
+    position: relative;
+    margin-bottom: 2.5rem;
+    padding-left: 20px;
+}
+
+.timeline-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* The dots on the timeline */
+.timeline-list li::before {
+    content: '';
+    position: absolute;
+    left: -24px; /* Adjusts horizontal position of the dot */
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    border: 2px solid var(--dark-bg);
+}
+
+.timeline-list h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-list p {
+    opacity: 0.9;
+}
+
+/* Responsive Design - Tablet and Desktop */
+@media (min-width: 768px) {
+    /* Hide the hamburger icon on desktop */
+    .hamburger-menu {
+        display: none;
+    }
+    
+    /* Reset the nav links for desktop view */
+    .nav-links {
+        position: static;
+        transform: none;
+        flex-direction: row;
+        background: none;
+        padding: 0;
+        width: auto;
+        gap: 2rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    .grid-3-col {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .grid-2-col {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .highlight-card {
+        transform: scale(1.05);
+    }
+}
+
+/* --- Desktop View (via Media Query) --- */
+@media (min-width: 992px) {
+    .table-mobile {
+        display: none; /* Hide mobile tables on desktop */
+    }
+    .table-desktop {
+        display: block; /* Show the full table */
+        width: 100%;
+        margin-top: 3rem;
+        overflow-x: auto;
+    }
+
+    .table-desktop table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+    }
+
+    .table-desktop th, .table-desktop td {
+        padding: 12px 15px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .table-desktop thead th {
+        background-color: #f2f2f2;
+        font-weight: 600;
+    }
+    
+    /* Highlight the HealthDrop column on desktop */
+    .table-desktop td:nth-child(3), .table-desktop th:nth-child(3) {
+        background-color: #fdebeb;
+        font-weight: 600;
+    }
+}

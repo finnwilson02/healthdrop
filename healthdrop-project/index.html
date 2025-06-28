@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set, responsiveness, and SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthDrop - Bridging the Last Mile</title>
+    <meta name="description" content="An open, affordable, VTOL drone for delivering life-saving supplies where they're needed most.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to our stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header and Hero Section -->
+    <header id="hero">
+        <nav>
+            <a href="#" class="logo">HealthDrop</a>
+            <button class="hamburger-menu" aria-label="Toggle menu" aria-expanded="false">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#problem">The Gap</a></li>
+                <li><a href="#solution">Our Solution</a></li>
+                <li><a href="#why">Our Vision</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Bridging the Last Mile for Critical Deliveries.</h1>
+            <p>An open, affordable, and locally-maintainable drone for delivering life-saving supplies where they're needed most.</p>
+            <a href="#problem" class="button">Learn More</a>
+        </div>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main>
+        <!-- The Problem Section -->
+        <section id="problem">
+            <div class="container">
+                <h2>The Missing Link in Logistics</h2>
+                <p class="section-intro">Remote communities face a critical gap in logistics. Life-saving supplies are close, yet impossibly far. Current drone solutions are either too limited for the journey or too expensive to scale.</p>
+                <!-- DESKTOP-ONLY TABLE -->
+                <div class="table-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Industrial Quads</th>
+                                <th>HealthDrop</th>
+                                <th>Zipline-Style Systems</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Operational Range</td>
+                                <td>~20 km</td>
+                                <td>60-90 km</td>
+                                <td>100+ km</td>
+                            </tr>
+                            <tr>
+                                <td>Payload</td>
+                                <td>6 kg</td>
+                                <td>1 kg</td>
+                                <td>~2 kg</td>
+                            </tr>
+                            <tr>
+                                <td>Unit Cost</td>
+                                <td>~A$18k</td>
+                                <td>< A$4k</td>
+                                <td>A$40k +</td>
+                            </tr>
+                            <tr>
+                                <td>Infrastructure</td>
+                                <td>None</td>
+                                <td>None (VTOL)</td>
+                                <td>Launch & Recovery Hubs</td>
+                            </tr>
+                            <tr>
+                                <td>Maintenance</td>
+                                <td>Proprietary</td>
+                                <td>Open-Hardware</td>
+                                <td>Proprietary (Service Contract)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- MOBILE-ONLY TABLES -->
+                <div class="table-mobile">
+                    <!-- DJI Table -->
+                    <div class="mobile-table-card">
+                        <h3>Industrial Quads</h3>
+                        <table>
+                            <tbody>
+                                <tr><td>Range</td><td>~20 km</td></tr>
+                                <tr><td>Payload</td><td>6 kg</td></tr>
+                                <tr><td>Cost</td><td>~A$18k</td></tr>
+                                <tr><td>Infrastructure</td><td>None</td></tr>
+                                <tr><td>Maintenance</td><td>Proprietary</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- HealthDrop Table (Highlighted) -->
+                    <div class="mobile-table-card highlight">
+                        <h3>HealthDrop</h3>
+                        <table>
+                            <tbody>
+                                <tr><td>Range</td><td>60-90 km</td></tr>
+                                <tr><td>Payload</td><td>1 kg</td></tr>
+                                <tr><td>Cost</td><td>< A$4k</td></tr>
+                                <tr><td>Infrastructure</td><td>None (VTOL)</td></tr>
+                                <tr><td>Maintenance</td><td>Open-Hardware</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Zipline Table -->
+                    <div class="mobile-table-card">
+                        <h3>Zipline-Style Systems</h3>
+                        <table>
+                            <tbody>
+                                <tr><td>Range</td><td>100+ km</td></tr>
+                                <tr><td>Payload</td><td>~2 kg</td></tr>
+                                <tr><td>Cost</td><td>A$40k +</td></tr>
+                                <tr><td>Infrastructure</td><td>Launch & Recovery Hubs</td></tr>
+                                <tr><td>Maintenance</td><td>Proprietary (Service Contract)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Solution Section -->
+        <section id="solution">
+            <div class="container">
+                <h2>Our Solution: A Purpose-Built Bridge</h2>
+                <p class="section-intro">HealthDrop is an open-source vertical take-off and landing (VTOL) vehicle that aims to facilitate deliveries to rural communities and disaster zones for the lowest possible cost.</p>
+                <div class="grid-2-col">
+                <div class="feature-item">
+                    <h4>60–90 km Operational Range</h4>
+                    <p>Easily covers critical micro-routes and return journeys.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>1 kg Specialised Payload</h4>
+                    <p>Built for cold-chain medical coolers or emergency-response pods.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Zero Infrastructure VTOL</h4>
+                    <p>Launches from anywhere, no runway or catapult needed.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Open & Maintainable</h4>
+                    <p>Allows for local repair, modification, and manufacturing.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Sub-A$4,000 Cost</h4>
+                    <p>Radically affordable, enabling community-level networks.</p>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Why Section -->
+        <section id="why">
+            <div class="container">
+                <h2>Why This Matters: A Platform for Empowerment</h2>
+                <p class="section-intro">Technology is only a solution if it empowers the people who use it. HealthDrop's design philosophy is built on creating sustainable, non-technical outcomes.</p>
+                <div class="grid-3-col">
+                <div class="card">
+                    <h3>Local Ownership</h3>
+                    <p>By making the system repairable and modifiable, communities can maintain and adapt their fleet without relying on distant supply chains or proprietary parts.</p>
+                </div>
+                <div class="card">
+                    <h3>Resilient Systems</h3>
+                    <p>A network of affordable drones is more resilient than a single expensive system. When one needs repair, others continue to serve the community.</p>
+                </div>
+                <div class="card">
+                    <h3>Equitable Access</h3>
+                    <p>At under A$4,000 per unit, even small health posts can justify the investment. This democratises access to rapid medical logistics.</p>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Roadmap Section -->
+        <section id="roadmap" class="content-section">
+            <div class="container">
+                <h2>Project Roadmap</h2>
+                <p class="section-intro">Our goal is to move HealthDrop from a concept to a scalable, field-ready platform. This roadmap outlines our key phases of development.</p>
+                <ol class="timeline-list">
+                    <li>
+                        <h3>Phase 1: Foundation & Collaboration (Q2 2025)</h3>
+                        <p>Work with partners to refine design requirements and establish a deep understanding of local logistical and environmental challenges.</p>
+                    </li>
+                    <li>
+                        <h3>Phase 2: Prototyping & Iteration (Q3-Q4 2025)</h3>
+                        <p>Build and test the initial HealthDrop prototype in a controlled environment, focusing on reliability, flight dynamics, and payload integration.</p>
+                    </li>
+                    <li>
+                        <h3>Phase 3: Field Trials & Framework Development (Q1-Q2 2026)</h3>
+                        <p>Conduct limited field trials with partners to validate performance in real-world conditions. The primary deliverable of this phase is a comprehensive, open-source documentation and training framework.</p>
+                    </li>
+                    <li>
+                        <h3>Phase 4: Dissemination & Scale (Late 2026)</h3>
+                        <p>Publish findings, release all hardware designs and software under an open-source license, and support the first wave of local, self-sustaining adoption.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <h2>Get Involved</h2>
+        <p>HealthDrop is an open project seeking collaborators, partners, and pilot programs. If our mission resonates with you, we'd love to connect.</p>
+        <p class="contact-info">
+            <a href="mailto:contact@finnwilson.me">contact@finnwilson.me</a>
+        </p>
+        <p class="copyright">© 2025 The HealthDrop Project</p>
+    </footer>
+
+    <!-- Link to our JavaScript file, placed at the end of the body for faster page loads -->
+    <script src="js/script.js"></script>
+</body>
+</html>

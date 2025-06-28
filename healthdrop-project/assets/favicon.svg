@@ -1,0 +1,7 @@
+<svg width="512" height="512" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="HealthDrop Logo">
+  <title>HealthDrop Icon</title>
+  <path 
+    fill="#A50F15" 
+    d="M40,0 L40,40 L0,40 L0,60 L40,60 L40,85 C40,85 45,95 50,100 C55,95 60,85 60,85 L60,60 L100,60 L100,40 L60,40 L60,0 Z"
+  />
+</svg>
